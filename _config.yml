@@ -1,0 +1,16 @@
+title: AI + Data Collaboration Workshop
+description: A Jekyll template for an academic workshop hosted on GitHub Pages.
+url: ""
+baseurl: ""
+
+theme: null
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

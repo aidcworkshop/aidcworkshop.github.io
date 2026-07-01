@@ -1,0 +1,177 @@
+---
+layout: default
+---
+{% assign workshop = site.data.workshop %}
+
+<header class="site-header" aria-label="Site header">
+  <a class="brand" href="{{ '/' | relative_url }}">{{ workshop.short_title }}</a>
+  <nav class="nav" aria-label="Primary navigation">
+    {% for item in workshop.nav %}
+      <a href="{{ item.url }}">{{ item.label }}</a>
+    {% endfor %}
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero__content">
+      <div class="title-banner" aria-label="{{ workshop.title }}">
+        <span class="title-banner__logo">AIDC</span>
+        <span class="title-banner__text">{{ workshop.title }}</span>
+        <span class="title-banner__colocation">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M9.5 14.5 14.5 9.5" />
+            <path d="M8.5 11.5 7 13a3.5 3.5 0 0 0 5 5l1.5-1.5" />
+            <path d="M15.5 12.5 17 11a3.5 3.5 0 0 0-5-5l-1.5 1.5" />
+          </svg>
+          {{ workshop.subtitle }}
+        </span>
+        <div class="meta" aria-label="Workshop date and location">
+          <span class="meta__item">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
+            </svg>
+            {{ workshop.date }}
+          </span>
+          <span class="meta__item">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z" />
+              <path d="M12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+            </svg>
+            {{ workshop.location }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="overview">
+    <div class="section__heading">
+      <h2>{{ workshop.overview.heading }}</h2>
+    </div>
+    <div class="section__body prose">
+      {% for paragraph in workshop.overview.body %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section" id="speakers">
+    <div class="section__heading">
+      <h2>{{ workshop.speakers.heading }}</h2>
+    </div>
+    <div class="section__body speaker-grid">
+      {% for person in workshop.speakers.people %}
+        <a class="speaker-card" href="{{ person.url }}">
+          <img src="{{ person.image | relative_url }}" alt="{{ person.name }} portrait">
+          <strong>{{ person.name }}</strong>
+          <span>{{ person.affiliation }}</span>
+          <p>{{ person.bio }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section" id="agenda">
+    <div class="section__heading">
+      <h2>{{ workshop.agenda.heading }}</h2>
+    </div>
+    <div class="section__body agenda-list">
+      {% for item in workshop.agenda.items %}
+        <div class="agenda-item">
+          <time>{{ item.time }}</time>
+          <span>{{ item.title }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section" id="cfp">
+    <div class="section__heading">
+      <h2>{{ workshop.cfp.heading }}</h2>
+    </div>
+    <div class="section__body prose">
+      <p>{{ workshop.cfp.topics_intro }}</p>
+      <h3>Topics of Interest</h3>
+      <ol class="topic-groups">
+        {% for group in workshop.cfp.topic_groups %}
+          <li>
+            <h4>{{ group.title }}</h4>
+            <ul>
+              {% for item in group.items %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ol>
+
+      <h3>Paper Submission Categories</h3>
+      {% for category in workshop.cfp.paper_categories %}
+        <p><strong>{{ category.title }}:</strong> {{ category.text }}</p>
+      {% endfor %}
+
+      <p>{{ workshop.cfp.submission.system_text }}</p>
+      <p><a class="action-link" href="{{ workshop.cfp.submission.url }}">{{ workshop.cfp.submission.label }}</a></p>
+      <ul class="topic-list">
+        {% for guideline in workshop.cfp.guidelines %}
+          <li>{{ guideline }}</li>
+        {% endfor %}
+      </ul>
+
+      <h3>{{ workshop.cfp.industry.heading }}</h3>
+      <p>{{ workshop.cfp.industry.body }}</p>
+
+      <h3>{{ workshop.cfp.tutorials.heading }}</h3>
+      {% for paragraph in workshop.cfp.tutorials.body %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+      <ul class="topic-list">
+        {% for demo in workshop.cfp.tutorials.demonstrations %}
+          <li>{{ demo }}</li>
+        {% endfor %}
+      </ul>
+      <p><a class="action-link" href="{{ workshop.cfp.tutorials.form.url }}">{{ workshop.cfp.tutorials.form.label }}</a></p>
+
+      <h3>{{ workshop.cfp.lightning.heading }}</h3>
+      {% for paragraph in workshop.cfp.lightning.body %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+      <ul class="topic-list">
+        {% for topic in workshop.cfp.lightning.topics %}
+          <li>{{ topic }}</li>
+        {% endfor %}
+      </ul>
+      <p><a class="action-link" href="{{ workshop.cfp.lightning.form.url }}">{{ workshop.cfp.lightning.form.label }}</a></p>
+
+      <h3>{{ workshop.cfp.ai_policy.heading }}</h3>
+      <p>{{ workshop.cfp.ai_policy.body_prefix }} <a class="text-link" href="{{ workshop.cfp.ai_policy.url }}">{{ workshop.cfp.ai_policy.label }}</a> {{ workshop.cfp.ai_policy.body_suffix }}</p>
+    </div>
+  </section>
+
+  <section class="section" id="organizers">
+    <div class="section__heading">
+      <h2>{{ workshop.organizers.heading }}</h2>
+    </div>
+    <div class="section__body organizer-groups">
+      {% for group in workshop.organizers.groups %}
+        <div class="organizer-group">
+          <h3>{{ group.role }}</h3>
+          <div class="people-list people-list--compact">
+            {% for person in group.people %}
+              <a class="person" href="{{ person.url }}">
+                <strong>{{ person.name }}</strong>
+                <span>{{ person.affiliation }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>&copy; 2026 AIDC Workshop Organizers</span>
+  <span>Co-located with ACSAC 2026</span>
+</footer>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Priya Raman portrait">
+  <rect width="160" height="160" rx="80" fill="#eef2f7"/>
+  <circle cx="80" cy="68" r="34" fill="#b98562"/>
+  <path d="M42 75c2-35 19-54 40-54 24 0 39 21 39 56-13-14-27-20-43-20-13 0-25 6-36 18Z" fill="#221f20"/>
+  <path d="M43 143c4-32 20-49 38-49 19 0 35 17 40 49" fill="#5b2a86"/>
+  <path d="M62 79c8 9 28 9 36 0" fill="none" stroke="#74462e" stroke-linecap="round" stroke-width="4"/>
+  <circle cx="68" cy="65" r="3" fill="#2d2d2d"/>
+  <circle cx="94" cy="65" r="3" fill="#2d2d2d"/>
+</svg>

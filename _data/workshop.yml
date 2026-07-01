@@ -1,0 +1,164 @@
+title: "Inaugural Workshop on Agentic AI in Offensive and Defensive Cyber Operations (AIDC'26)"
+short_title: "AIDC Workshop"
+subtitle: "Co-located at ACSAC 2026"
+date: "December 7, 2026"
+location: "Los Angeles, California, USA"
+nav:
+  - label: "Overview"
+    url: "#overview"
+  - label: "Speakers"
+    url: "#speakers"
+  - label: "Agenda"
+    url: "#agenda"
+  - label: "CFP"
+    url: "#cfp"
+  - label: "Organizers"
+    url: "#organizers"
+
+overview:
+  heading: "Overview"
+  body:
+    - "Modern cyber operations undergo rapid changes due to the integration of autonomous, language-model-driven agents. In offensive operations, agentic systems automate penetration testing, red-team activities, and end-to-end network intrusion campaigns. Frontier models demonstrate high performance on public benchmarks. Conversely, cyber defense increasingly relies on autonomous agents for real-time threat detection, automated mitigation, and active countermeasure deployment. This co-evolution creates a complex adversarial environment where autonomous offensive models directly interact with adaptive defensive systems."
+    - "Despite these rapid capabilities, agentic architectures exhibit critical operational vulnerabilities. Offensive models are frequently trained on narrow, repetitive public corpora, which induce predictable statistical behaviors. Consequently, these agents remain vulnerable to targeted defensive deceptions, prompt exfiltration, and operational security failures. Similarly, automated defensive systems face challenges regarding evasion, input manipulation, and model poisoning. Traditional static evaluation environments fail to replicate these dynamic, model-on-model interactions. Therefore, a systematic analysis of both offensive limitations and defensive capabilities is essential to ensure the robustness of cyber operations."
+    - "The Workshop on Agentic AI in Offensive and Defensive Cyber Operations (AIDC) provides a specialized forum to address these emergent challenges. The goal of AIDC is to bring together researchers, practitioners, and policymakers from academia, industry, and government to advance the theory, methodology, and practice of agentic security. By establishing a shared space for adversarial AI specialists and cybersecurity operational experts, the workshop intends to transition the community from isolated model evaluations toward holistic, dynamic, and resilient systems design."
+
+speakers:
+  heading: "Keynote Speakers"
+  people:
+    - name: "Adam Smith"
+      affiliation: "CEO of X & Professor at Purdue University"
+      bio: "Adam Smith studies autonomous cyber systems, agent orchestration, and practical deployments of AI-assisted security workflows."
+      image: "/assets/img/speakers/adam-smith.svg"
+      url: "#"
+    - name: "Maya Chen"
+      affiliation: "Principal Scientist, Secure Systems Lab"
+      bio: "Maya Chen works on resilient defensive agents, cyber ranges, and evaluation methods for adaptive attacker-defender environments."
+      image: "/assets/img/speakers/maya-chen.svg"
+      url: "#"
+    - name: "Priya Raman"
+      affiliation: "Director of AI Security, Northstar Research"
+      bio: "Priya Raman focuses on prompt security, model-on-model adversarial interaction, and operational governance for autonomous cyber tools."
+      image: "/assets/img/speakers/priya-raman.svg"
+      url: "#"
+
+agenda:
+  heading: "Agenda"
+  items:
+    - time: "09:00"
+      title: "Welcome and Opening Remarks"
+    - time: "09:15"
+      title: "Invited Talk"
+    - time: "10:15"
+      title: "Paper Session"
+    - time: "11:30"
+      title: "Poster and Demo Session"
+    - time: "13:30"
+      title: "Discussion Session"
+    - time: "15:00"
+      title: "Panel"
+    - time: "16:30"
+      title: "Closing Remarks"
+
+cfp:
+  heading: "Call for Papers"
+  topics_intro: "AIDC solicits original contributions on a broad range of topics, which include but are not limited to:"
+  topic_groups:
+    - title: "Autonomous Offensive Operations"
+      items:
+        - "Automated vulnerability discovery and exploitation"
+        - "Agentic penetration testing and autonomous red-teaming frameworks"
+        - "Optimization of multi-agent attack orchestration"
+    - title: "Autonomous Defensive Countermeasures"
+      items:
+        - "Autonomous detection, attribution, and digital forensics of AI-driven intrusions"
+        - "Deployment of automated patches and dynamic firewall configurations"
+        - "Active deception strategies and honeypots designed against AI agents"
+    - title: "Model-on-Model Adversarial Interaction"
+      items:
+        - "Evaluation of defensive prompt injections and indirect prompt injections"
+        - "Execution of counterattacks that exploit language model resource limitations and tokenization artifacts"
+        - "Data poisoning defenses directed at offensive pipelines"
+    - title: "Evaluation Environments and Benchmarks"
+      items:
+        - "Development of adaptive and dynamic cyber ranges"
+        - "Frameworks to analyze simulation-to-real transfer limits for autonomous agents"
+        - "Verification of benchmark integrity and resilience against memorization"
+    - title: "Theory, Specification, and Governance"
+      items:
+        - "Formal verification methods and rigorous specifications for agentic security"
+        - "Game-theoretic modeling of autonomous attacker-defender interactions"
+        - "Policy frameworks, coordinated disclosure models, and community norms for autonomous cyber operations"
+  paper_categories:
+    - title: "Regular technical papers"
+      text: "Up to 12 pages excluding references and appendices."
+    - title: "Short position papers or work-in-progress (WIP) papers"
+      text: "Up to 6 pages, excluding references and appendices. Short papers are suitable for position papers or original works whose descriptions fit within 6 pages. WIP papers are suitable for original yet incomplete work that is looking for middle-stage feedback from the community."
+  submission:
+    system_text: "AIDC uses the official ACSAC HotCRP submission system."
+    label: "Submission Portal"
+    url: "https://aidc.submit.acsac.org/"
+  guidelines:
+    - "All submitted papers must be prepared in US Letter size, not A4, using the double-column IEEE conference format. This requirement will be strictly enforced. IEEE format templates are available at IEEE Conference Templates."
+    - 'LaTeX submissions must use the IEEEtran.cls version 1.8b template with the \documentclass[conference,compsoc]{IEEEtran} document class option.'
+    - "Submissions must be properly anonymized for double-blind review."
+    - "At least one author of each accepted paper must register for the workshop and present the paper. Simultaneous submission of the same work to multiple venues or submission of previously published work are prohibited."
+    - "Awards: Accepted papers will be considered for the Best Paper Award."
+  industry:
+    heading: "Industry Submissions"
+    body: "We welcome submissions from industry practitioners and professionals with non-academic backgrounds. If you develop practical offensive or defensive systems and wish to publish your applied research in an academic venue, we encourage you to submit your work to AIDC 2026."
+  tutorials:
+    heading: "Submission Guidelines for Tutorials"
+    body:
+      - "We invite submissions of tutorial proposals that emphasize the live demonstration of agentic systems in offensive and defensive cyber operations. We seek demonstration-driven sessions. In these sessions, presenters must show how their autonomous offensive or defensive systems operate in practice. Tutorials should align with the core themes of the AIDC workshop."
+      - "Each tutorial submission will undergo a review process to evaluate relevance, originality, and feasibility. Accepted tutorials will receive a 30-minute to 45-minute time slot during the workshop. Presenters must devote a significant portion of this time to live demonstrations, audience questions, and interactive exploration."
+    demonstrations:
+      - "Autonomous vulnerability discovery and penetration testing frameworks"
+      - "Automated defensive countermeasures, active deception strategies, and honeypots"
+      - "Adversarial interactions, such as prompt injections and data poisoning defenses"
+      - "Adaptive evaluation environments and dynamic cyber ranges"
+    form:
+      label: "Tutorial submission form"
+      url: "https://forms.gle/dCQ8QHnYEc8PV9ZQA"
+  lightning:
+    heading: "Submission Guidelines for Lightning Talks"
+    body:
+      - "We will host a Lightning Talks session at the AIDC workshop. We request concise, 5-minute in-person presentations on topics of immediate interest to the agentic security community."
+      - "Please note that lightning talks are not intended for self-promotion or commercial advertisement. Presenters must share concepts, methodologies, or findings that apply broadly and initiate meaningful discussions. Presenters must focus on the research or system. They must avoid promoting products, services, or organizations. We require presenters to avoid sales pitches, advertisements, and excessive emphasis on personal or corporate achievements. We will strictly enforce the time limit for all presentations."
+      - "Please submit your Lightning Talk title and abstract, maximum of 200 words, for full consideration via the Lightning Talk submission form. We will publish the accepted abstracts on the workshop website."
+    topics:
+      - "Emerging research areas"
+      - "Work-in-progress ideas and preliminary results"
+      - "Practical problems and lessons learned"
+      - "Methodology details"
+      - "Evaluation environments and simulations"
+      - "Data and visualizations, such as adversarial AI and cyber operations datasets"
+      - "Interdisciplinary subjects related to autonomous cyber operations"
+    form:
+      label: "Lightning Talk submission form"
+      url: "https://forms.gle/9pvzJqpmznaZZb5P6"
+  ai_policy:
+    heading: "AI Usage Policy"
+    body_prefix: "Authors must follow the"
+    label: "ACSAC AI Usage Policy"
+    body_suffix: "for all workshop submissions."
+    url: "https://www.acsac.org/2026/submissions/ai/"
+
+organizers:
+  heading: "Symposium Organizers"
+  groups:
+    - role: "Program Co-Chairs"
+      people:
+        - name: "Kerri Prinos"
+          affiliation: "Horizon3.ai"
+          url: "https://www.linkedin.com/in/kerri-prinos"
+        - name: "Z. Berkay Celik"
+          affiliation: "Purdue University"
+          url: "https://beerkay.github.io/"
+        - name: "Dongyan Xu"
+          affiliation: "Purdue University"
+          url: "https://www.cs.purdue.edu/homes/dxu/"
+    - role: "Web Chair"
+      people:
+        - name: "Ananth Shreekumar"
+          affiliation: "Purdue University"
+          url: "https://ashreeku.github.io/"

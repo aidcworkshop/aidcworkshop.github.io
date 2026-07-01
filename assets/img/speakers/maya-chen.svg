@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Maya Chen portrait">
+  <rect width="160" height="160" rx="80" fill="#eef2f7"/>
+  <path d="M45 76c0-34 15-54 39-54 22 0 35 17 35 49 0 29-13 47-37 47-23 0-37-16-37-42Z" fill="#2e2a2a"/>
+  <circle cx="82" cy="70" r="33" fill="#c99674"/>
+  <path d="M44 142c5-31 20-48 38-48s34 17 39 48" fill="#0f4c5c"/>
+  <path d="M50 57c16-15 39-21 68 2-4-23-17-37-35-37-19 0-31 13-33 35Z" fill="#2e2a2a"/>
+  <path d="M64 80c8 8 27 8 35 0" fill="none" stroke="#7b4e39" stroke-linecap="round" stroke-width="4"/>
+  <circle cx="69" cy="66" r="3" fill="#2d2d2d"/>
+  <circle cx="96" cy="66" r="3" fill="#2d2d2d"/>
+</svg>
