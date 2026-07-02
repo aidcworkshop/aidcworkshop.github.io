@@ -5,6 +5,31 @@
   --link: #0b57d0;
   --paper: #ffffff;
   --soft: #f8fafc;
+  --header-bg: rgba(255, 255, 255, 0.96);
+  --banner-bg: #eef3f8;
+  --action-bg: #000000;
+  --action-text: #ffffff;
+  --action-hover: #333333;
+  --logo-outer: #ffffff;
+  --logo-outline: #c7d4e4;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --ink: #f4f7fb;
+  --muted: #a8b3c2;
+  --line: #293546;
+  --link: #7fb4ff;
+  --paper: #0d1117;
+  --soft: #121922;
+  --header-bg: rgba(13, 17, 23, 0.94);
+  --banner-bg: #111a25;
+  --action-bg: #7fb4ff;
+  --action-text: #08111f;
+  --action-hover: #a9ccff;
+  --logo-outer: #192435;
+  --logo-outline: #3c526c;
+  color-scheme: dark;
 }
 
 * {
@@ -40,7 +65,7 @@ a {
   gap: 24px;
   min-height: 64px;
   padding: 0 max(28px, calc((100vw - 820px) / 2));
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
@@ -67,7 +92,46 @@ a {
 }
 
 .nav a:hover {
+  color: var(--link);
+}
+
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
   color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.theme-toggle__icon {
+  grid-area: 1 / 1;
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.theme-toggle__icon--sun,
+:root[data-theme="dark"] .theme-toggle__icon--moon {
+  opacity: 0;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--sun {
+  opacity: 1;
 }
 
 main,
@@ -122,17 +186,15 @@ h1 {
   margin: 0 0 0 50%;
   padding: 40px max(28px, calc((100vw - 820px) / 2)) 34px;
   transform: translateX(-50%);
-  background: #eef3f8;
+  background: var(--banner-bg);
   border-bottom: 1px solid var(--line);
 }
 
 .title-banner__logo {
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(2.35rem, 7vw, 4.4rem);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.08em;
+  display: block;
+  width: min(360px, 86vw);
+  height: auto;
 }
 
 .title-banner__text {
@@ -150,6 +212,11 @@ h1 {
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 500;
+  text-decoration: none;
+}
+
+.title-banner__colocation:hover {
+  color: var(--link);
 }
 
 .title-banner__colocation svg {
@@ -323,10 +390,10 @@ h4 {
   align-items: center;
   min-height: 36px;
   padding: 8px 13px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--action-bg);
   border-radius: 6px;
-  background: var(--ink);
-  color: #ffffff;
+  background: var(--action-bg);
+  color: var(--action-text);
   font-size: 0.9rem;
   font-weight: 650;
   line-height: 1.2;
@@ -334,8 +401,9 @@ h4 {
 }
 
 .action-link:hover {
-  border-color: #333333;
-  background: #333333;
+  border-color: var(--action-hover);
+  background: var(--action-hover);
+  color: var(--paper);
 }
 
 .people-list {
@@ -362,7 +430,7 @@ h4 {
 }
 
 .speaker-card:hover {
-  border-color: #c8ced8;
+  border-color: var(--link);
 }
 
 .speaker-card img {
@@ -439,12 +507,14 @@ h4 {
   .site-header {
     position: static;
     align-items: flex-start;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 8px;
     padding: 16px 22px;
   }
 
   .nav {
+    grid-column: 1 / -1;
     justify-content: flex-start;
     gap: 10px 16px;
   }

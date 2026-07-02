@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-labelledby="aidc-logo-title aidc-logo-desc">
+  <title id="aidc-logo-title">AIDC Workshop Logo</title>
+  <desc id="aidc-logo-desc">A professional logo for the Workshop on Agentic AI in Offensive and Defensive Cyber Operations.</desc>
+  <defs>
+    <linearGradient id="aidc-shield" x1="118" x2="218" y1="34" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#164f8f"/>
+      <stop offset="1" stop-color="#0f2e4d"/>
+    </linearGradient>
+    <linearGradient id="aidc-node" x1="116" x2="215" y1="63" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2aa7b8"/>
+      <stop offset="1" stop-color="#3f7fb7"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(42 18)">
+    <path d="M120 8 210 42v58c0 52-34 83-90 104-56-21-90-52-90-104V42Z" fill="#ffffff" stroke="#c7d4e4" stroke-width="4"/>
+    <path d="M120 22 195 50v49c0 42-25 68-75 88-50-20-75-46-75-88V50Z" fill="url(#aidc-shield)"/>
+    <path d="M81 92c22-22 54-22 76 0M86 126c20 17 48 17 68 0M120 59v93" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="7" opacity=".95"/>
+    <path d="M82 92 120 59l37 33-37 34Z" fill="none" stroke="url(#aidc-node)" stroke-linejoin="round" stroke-width="7"/>
+    <circle cx="82" cy="92" r="9" fill="#8fd5dd" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="120" cy="59" r="9" fill="#8fd5dd" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="157" cy="92" r="9" fill="#8fd5dd" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="120" cy="126" r="9" fill="#8fd5dd" stroke="#ffffff" stroke-width="4"/>
+  </g>
+  <g transform="translate(265 62)">
+    <text x="0" y="52" fill="#0c1724" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" letter-spacing="5">AIDC</text>
+    <path d="M3 70h178" stroke="#2aa7b8" stroke-linecap="round" stroke-width="5"/>
+    <text x="2" y="101" fill="#344256" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="650" letter-spacing="1.7">WORKSHOP 2026</text>
+  </g>
+</svg>
