@@ -85,11 +85,6 @@ layout: default
         {% endfor %}
       </ol>
 
-      <h3>Paper Submission Categories</h3>
-      {% for category in workshop.cfp.paper_categories %}
-        <p><strong>{{ category.title }}:</strong> {{ category.text }}</p>
-      {% endfor %}
-
       <div class="important-dates" aria-label="Important dates">
         {% for schedule in workshop.cfp.important_dates %}
           <div class="important-dates__group">
@@ -112,6 +107,11 @@ layout: default
           </div>
         {% endfor %}
       </div>
+
+      <h3>Paper Submission Categories</h3>
+      {% for category in workshop.cfp.paper_categories %}
+        <p><strong>{{ category.title }}:</strong> {{ category.text }}</p>
+      {% endfor %}
 
       <p>{{ workshop.cfp.submission.system_text }}</p>
       <p><a class="action-link" href="{{ workshop.cfp.submission.url }}">{{ workshop.cfp.submission.label }}</a></p>

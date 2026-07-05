@@ -99,7 +99,7 @@ cfp:
           date: "November 6, 2026"
     - heading: "Lightning Talk/Tutorial"
       items:
-        - label: "Poster/Lightning Talk/Tutorial submission due"
+        - label: "Lightning Talk/Tutorial submission due"
           date: "October 15, 2026 (Anywhere-on-Earth, AoE)"
         - label: "Notification of Lightning Talk/Tutorial acceptance"
           date: "October 23, 2026"
