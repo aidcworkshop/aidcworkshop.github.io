@@ -341,6 +341,68 @@ h4 {
   margin-bottom: 6px;
 }
 
+.important-dates {
+  display: grid;
+  gap: 18px;
+  margin: 10px 0 22px;
+}
+
+.important-dates__group {
+  padding: 18px 18px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--soft), var(--paper));
+}
+
+.important-dates__heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.important-dates__heading-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--link);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.important-dates__list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.important-dates__item {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.important-dates__item-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15em;
+  fill: none;
+  stroke: var(--action-bg);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.important-dates__item strong {
+  color: var(--ink);
+}
+
 .topic-groups {
   display: grid;
   gap: 14px;

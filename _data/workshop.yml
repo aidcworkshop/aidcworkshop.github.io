@@ -88,6 +88,23 @@ cfp:
       text: "Up to 12 pages excluding references and appendices."
     - title: "Short position papers or work-in-progress (WIP) papers"
       text: "Up to 6 pages, excluding references and appendices. Short papers are suitable for position papers or original works whose descriptions fit within 6 pages. WIP papers are suitable for original yet incomplete work that is looking for middle-stage feedback from the community."
+  important_dates:
+    - heading: "Important Dates"
+      items:
+        - label: "Paper submission due"
+          date: "October 2, 2026 (Anywhere-on-Earth, AoE)"
+        - label: "Notification of paper acceptance"
+          date: "October 23, 2026"
+        - label: "Final paper due"
+          date: "November 6, 2026"
+    - heading: "Lightning Talk/Tutorial"
+      items:
+        - label: "Poster/Lightning Talk/Tutorial submission due"
+          date: "October 15, 2026 (Anywhere-on-Earth, AoE)"
+        - label: "Notification of Lightning Talk/Tutorial acceptance"
+          date: "October 23, 2026"
+        - label: "Final Lightning Talk/Tutorial Abstract due"
+          date: "November 6, 2026"
   submission:
     system_text: "AIDC uses the official ACSAC HotCRP submission system."
     label: "Submission Portal"
