@@ -113,7 +113,6 @@ cfp:
     - "All submitted papers must be prepared in US Letter size, not A4, using the double-column IEEE conference format. This requirement will be strictly enforced. IEEE format templates are available at IEEE Conference Templates."
     - 'LaTeX submissions must use the IEEEtran.cls version 1.8b template with the \documentclass[conference,compsoc]{IEEEtran} document class option.'
     - "Submissions must be properly anonymized for double-blind review."
-    - "At least one author of each accepted paper must register for the workshop and present the paper. Simultaneous submission of the same work to multiple venues or submission of previously published work are prohibited."
     - "Awards: Accepted papers will be considered for the Best Paper Award."
   industry:
     heading: "Industry Submissions"
@@ -148,6 +147,15 @@ cfp:
     form:
       label: "Lightning Talk submission form"
       url: "https://forms.gle/9pvzJqpmznaZZb5P6"
+  publications_registration:
+    heading: "Publications and Registration"
+    body:
+      - "All accepted papers will be published by IEEE. Abstracts for lightning talks and tutorials will be available on the AIDC webpage but will not be published by IEEE."
+      - "At least one author of each accepted submission (paper, lightning talk, or tutorial) must register for the workshop and present their work. Simultaneous submission of the same work to multiple venues or the submission of previously published work is strictly prohibited."
+      - "Please register for the workshop through the"
+      - "If you require a visa, please plan ahead to ensure sufficient processing time. To begin the visa application process, please review the instructions provided at the"
+    registration_url: "https://www.acsac.org/2026/registration/"
+    visa_url: "https://www.acsac.org/visa"
   ai_policy:
     heading: "AI Usage Policy"
     body_prefix: "Authors must follow the"

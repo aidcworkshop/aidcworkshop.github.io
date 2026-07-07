@@ -131,6 +131,17 @@ layout: default
       </ul>
       <p><a class="action-link" href="{{ workshop.cfp.lightning.form.url }}">{{ workshop.cfp.lightning.form.label }}</a></p>
 
+      <h3>{{ workshop.cfp.publications_registration.heading }}</h3>
+      {% for paragraph in workshop.cfp.publications_registration.body %}
+        {% if forloop.index == 3 %}
+          <p>{{ paragraph | append: " " }}<a class="text-link" href="{{ workshop.cfp.publications_registration.registration_url }}">ACSAC registration page</a>. You must select the appropriate box on the conference registration form to include the AIDC Workshop fee.</p>
+        {% elsif forloop.index == 4 %}
+          <p>{{ paragraph | append: " " }}<a class="text-link" href="{{ workshop.cfp.publications_registration.visa_url }}">conference website</a>.</p>
+        {% else %}
+          <p>{{ paragraph }}</p>
+        {% endif %}
+      {% endfor %}
+
       <h3>{{ workshop.cfp.ai_policy.heading }}</h3>
       <p>{{ workshop.cfp.ai_policy.body_prefix }} <a class="text-link" href="{{ workshop.cfp.ai_policy.url }}">{{ workshop.cfp.ai_policy.label }}</a> {{ workshop.cfp.ai_policy.body_suffix }}</p>
     </div>
