@@ -131,7 +131,14 @@ layout: default
       </ul>
       <p><a class="action-link" href="{{ workshop.cfp.lightning.form.url }}">{{ workshop.cfp.lightning.form.label }}</a></p>
 
-      <h3>{{ workshop.cfp.publications_registration.heading }}</h3>
+      <h3 class="publications-registration__heading">
+        <svg class="publications-registration__icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+          <path d="M14 3v5h5" />
+          <path d="M9 13h6M9 17h6" />
+        </svg>
+        <span>{{ workshop.cfp.publications_registration.heading }}</span>
+      </h3>
       {% for paragraph in workshop.cfp.publications_registration.body %}
         {% if forloop.index == 3 %}
           <p>{{ paragraph | append: " " }}<a class="text-link" href="{{ workshop.cfp.publications_registration.registration_url }}">ACSAC registration page</a>. You must select the appropriate box on the conference registration form to include the AIDC Workshop fee.</p>
