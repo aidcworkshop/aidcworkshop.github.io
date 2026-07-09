@@ -556,13 +556,16 @@ h4 {
 }
 
 .organizer-group h3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 0;
 }
 
 .organizer-status {
   display: inline-flex;
   align-items: center;
-  margin-left: 8px;
   padding: 2px 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
