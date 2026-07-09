@@ -186,13 +186,25 @@ layout: default
     <div class="section__body organizer-groups">
       {% for group in workshop.organizers.groups %}
         <div class="organizer-group">
-          <h3>{{ group.role }}</h3>
-          <div class="people-list people-list--compact">
+          <h3>
+            {{ group.role }}
+            {% if group.status %}
+              <span class="organizer-status">{{ group.status }}</span>
+            {% endif %}
+          </h3>
+          <div class="people-list people-list--compact{% if group.compact %} people-list--dense{% endif %}">
             {% for person in group.people %}
-              <a class="person" href="{{ person.url }}">
-                <strong>{{ person.name }}</strong>
-                <span>{{ person.affiliation }}</span>
-              </a>
+              {% if person.url %}
+                <a class="person" href="{{ person.url }}">
+                  <strong>{{ person.name }}</strong>
+                  <span>{{ person.affiliation }}</span>
+                </a>
+              {% else %}
+                <div class="person person--static">
+                  <strong>{{ person.name }}</strong>
+                  <span>{{ person.affiliation }}</span>
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>

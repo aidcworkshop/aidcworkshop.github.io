@@ -546,6 +546,10 @@ h4 {
   gap: 14px;
 }
 
+.people-list--dense {
+  gap: 8px;
+}
+
 .organizer-groups {
   display: grid;
   gap: 22px;
@@ -553,6 +557,21 @@ h4 {
 
 .organizer-group h3 {
   margin-top: 0;
+}
+
+.organizer-status {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
 }
 
 .person {

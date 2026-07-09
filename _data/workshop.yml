@@ -177,6 +177,30 @@ organizers:
         - name: "Dongyan Xu"
           affiliation: "Purdue University"
           url: "https://www.cs.purdue.edu/homes/dxu/"
+    - role: "Steering Committee"
+      status: "In Progress"
+      compact: true
+      people:
+        - name: "Snehal Antani"
+          affiliation: "Horizon3"
+        - name: "Giovanni Vigna"
+          affiliation: "UC Santa Barbara"
+    - role: "Program Committee Members"
+      status: "In Progress"
+      compact: true
+      people:
+        - name: "Antonio Bianchi"
+          affiliation: "Purdue University"
+        - name: "Mikhail Kuznetsov"
+          affiliation: "AWS"
+        - name: "Tim Pappa"
+          affiliation: "Walmart"
+        - name: "Brendan Saltaformaggio"
+          affiliation: "Georgia Tech"
+        - name: "Gang Wang"
+          affiliation: "UIUC"
+        - name: "Ruoyu (Fish) Wang"
+          affiliation: "Arizona State University"
     - role: "Web Chair"
       people:
         - name: "Ananth Shreekumar"
