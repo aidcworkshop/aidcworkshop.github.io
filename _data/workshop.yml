@@ -191,6 +191,8 @@ organizers:
       people:
         - name: "Antonio Bianchi"
           affiliation: "Purdue University"
+        - name: "Mario Kahlhofer"
+          affiliation: "Dynatrace"
         - name: "Mikhail Kuznetsov"
           affiliation: "AWS"
         - name: "Tim Pappa"
