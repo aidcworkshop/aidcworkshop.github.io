@@ -187,32 +187,100 @@ layout: default
     <div class="section__heading">
       <h2>{{ workshop.organizers.heading }}</h2>
     </div>
-    <div class="section__body organizer-groups">
-      {% for group in workshop.organizers.groups %}
-        <div class="organizer-group">
-          <h3>
-            {{ group.role }}
-            {% if group.status %}
-              <span class="organizer-status">{{ group.status }}</span>
-            {% endif %}
-          </h3>
-          <div class="people-list people-list--compact{% if group.compact %} people-list--dense{% endif %}">
-            {% for person in group.people %}
-              {% if person.url %}
-                <a class="person" href="{{ person.url }}">
-                  <strong>{{ person.name }}</strong>
-                  <span>{{ person.affiliation }}</span>
-                </a>
-              {% else %}
-                <div class="person person--static">
-                  <strong>{{ person.name }}</strong>
-                  <span>{{ person.affiliation }}</span>
+    <div class="section__body organizer-sections">
+      <div class="leadership-block">
+        {% for group in workshop.organizers.groups %}
+          {% if group.featured and group.people.size > 1 %}
+            <div class="leadership-group">
+              <h4 class="leadership-group__title">
+                {{ group.role }}
+                {% if group.status %}
+                  <span class="organizer-status">{{ group.status }}</span>
+                {% endif %}
+              </h4>
+              <div class="leadership-grid">
+                {% for person in group.people %}
+                  {% if person.url %}
+                    <a class="leadership-card" href="{{ person.url }}">
+                      <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                      <strong>{{ person.name }}</strong>
+                      <span>{{ person.affiliation }}</span>
+                    </a>
+                  {% else %}
+                    <div class="leadership-card leadership-card--static">
+                      <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                      <strong>{{ person.name }}</strong>
+                      <span>{{ person.affiliation }}</span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="featured-role-grid">
+          {% for group in workshop.organizers.groups %}
+            {% if group.featured and group.people.size == 1 %}
+              <div class="leadership-group leadership-group--single">
+                <h4 class="leadership-group__title">
+                  {{ group.role }}
+                  {% if group.status %}
+                    <span class="organizer-status">{{ group.status }}</span>
+                  {% endif %}
+                </h4>
+                <div class="leadership-grid leadership-grid--single">
+                  {% for person in group.people %}
+                    {% if person.url %}
+                      <a class="leadership-card" href="{{ person.url }}">
+                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        <strong>{{ person.name }}</strong>
+                        <span>{{ person.affiliation }}</span>
+                      </a>
+                    {% else %}
+                      <div class="leadership-card leadership-card--static">
+                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        <strong>{{ person.name }}</strong>
+                        <span>{{ person.affiliation }}</span>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
                 </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
+
+      <div class="organizer-groups">
+        {% for group in workshop.organizers.groups %}
+          {% unless group.featured %}
+            <div class="organizer-group">
+              <h3>
+                {{ group.role }}
+                {% if group.status %}
+                  <span class="organizer-status">{{ group.status }}</span>
+                {% endif %}
+              </h3>
+              <div class="people-list people-list--compact{% if group.compact %} people-list--dense{% endif %}">
+                {% for person in group.people %}
+                  {% if person.url %}
+                    <a class="person" href="{{ person.url }}">
+                      <strong>{{ person.name }}</strong>
+                      <span>{{ person.affiliation }}</span>
+                    </a>
+                  {% else %}
+                    <div class="person person--static">
+                      <strong>{{ person.name }}</strong>
+                      <span>{{ person.affiliation }}</span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
     </div>
   </section>
 </main>

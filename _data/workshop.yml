@@ -166,27 +166,52 @@ cfp:
 organizers:
   heading: "Symposium Organizers"
   groups:
-    - role: "Program Co-Chairs"
-      people:
-        - name: "Kerri Prinos"
-          affiliation: "Horizon3"
-          url: "https://www.linkedin.com/in/kerri-prinos"
-        - name: "Z. Berkay Celik"
-          affiliation: "Purdue University"
-          url: "https://beerkay.github.io/"
-        - name: "Dongyan Xu"
-          affiliation: "Purdue University"
-          url: "https://www.cs.purdue.edu/homes/dxu/"
     - role: "Steering Committee"
+      featured: true
       status: "In Progress"
       compact: true
       people:
         - name: "Snehal Antani"
           affiliation: "Horizon3"
+          image: "/assets/img/organizers/snehal-antani.jpg"
+          url: "https://linkedin.com/in/snehalantani"
         - name: "Wenke Lee"
           affiliation: "Georgia Tech"
+          image: "/assets/img/organizers/wenke-lee.jpg"
+          url: "https://wenke.gtisc.gatech.edu/"
         - name: "Giovanni Vigna"
           affiliation: "UC Santa Barbara"
+          image: "/assets/img/organizers/giovanni-vigna.jpg"
+          url: "https://sites.cs.ucsb.edu/~vigna/"
+    - role: "Program Co-Chairs"
+      featured: true
+      people:
+        - name: "Kerri Prinos"
+          affiliation: "Horizon3"
+          image: "/assets/img/organizers/kerri-prinos.jpeg"
+          url: "https://www.linkedin.com/in/kerri-prinos"
+        - name: "Z. Berkay Celik"
+          affiliation: "Purdue University"
+          image: "/assets/img/organizers/berkay-celik.jpg"
+          url: "https://beerkay.github.io/"
+        - name: "Dongyan Xu"
+          affiliation: "Purdue University"
+          image: "/assets/img/organizers/dongyan-xu.jpg"
+          url: "https://www.cs.purdue.edu/homes/dxu/"
+    - role: "Publicity Chair"
+      featured: true
+      people:
+        - name: "Muslum Ozgur Ozmen"
+          affiliation: "Arizona State University"
+          image: "/assets/img/organizers/muslum-ozgur-ozmen.jpg"
+          url: "https://ozgurozmen.github.io/"
+    - role: "Web Chair"
+      featured: true
+      people:
+        - name: "Ananth Shreekumar"
+          affiliation: "Purdue University"
+          image: "/assets/img/organizers/ananth-shreekumar.jpeg"
+          url: "https://ashreeku.github.io/"
     - role: "Program Committee Members"
       status: "In Progress"
       compact: true
@@ -207,8 +232,3 @@ organizers:
           affiliation: "UIUC"
         - name: "Ruoyu (Fish) Wang"
           affiliation: "Arizona State University"
-    - role: "Web Chair"
-      people:
-        - name: "Ananth Shreekumar"
-          affiliation: "Purdue University"
-          url: "https://ashreeku.github.io/"
