@@ -102,7 +102,11 @@ layout: default
       <p><a class="action-link" href="{{ workshop.cfp.submission.url }}">{{ workshop.cfp.submission.label }}</a></p>
       <ul class="topic-list">
         {% for guideline in workshop.cfp.guidelines %}
-          <li>{{ guideline }}</li>
+          {% if forloop.first %}
+            <li>All submitted papers must be prepared in US Letter size, not A4, using the double-column IEEE conference format. This requirement will be strictly enforced. IEEE format templates are available at <a class="text-link" href="{{ workshop.cfp.ieee_templates_url }}">IEEE Conference Templates</a>.</li>
+          {% else %}
+            <li>{{ guideline }}</li>
+          {% endif %}
         {% endfor %}
       </ul>
 
@@ -198,17 +202,25 @@ layout: default
                   <span class="organizer-status">{{ group.status }}</span>
                 {% endif %}
               </h4>
-              <div class="leadership-grid">
+              <div class="leadership-grid{% if group.featured_columns == 4 %} leadership-grid--four{% endif %}{% if group.featured_columns == 5 %} leadership-grid--five{% endif %}">
                 {% for person in group.people %}
                   {% if person.url %}
                     <a class="leadership-card" href="{{ person.url }}">
-                      <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                      {% if person.image %}
+                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                      {% else %}
+                        <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                      {% endif %}
                       <strong>{{ person.name }}</strong>
                       <span>{{ person.affiliation }}</span>
                     </a>
                   {% else %}
                     <div class="leadership-card leadership-card--static">
-                      <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                      {% if person.image %}
+                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                      {% else %}
+                        <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                      {% endif %}
                       <strong>{{ person.name }}</strong>
                       <span>{{ person.affiliation }}</span>
                     </div>
@@ -233,13 +245,21 @@ layout: default
                   {% for person in group.people %}
                     {% if person.url %}
                       <a class="leadership-card" href="{{ person.url }}">
-                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        {% if person.image %}
+                          <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        {% else %}
+                          <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                        {% endif %}
                         <strong>{{ person.name }}</strong>
                         <span>{{ person.affiliation }}</span>
                       </a>
                     {% else %}
                       <div class="leadership-card leadership-card--static">
-                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        {% if person.image %}
+                          <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        {% else %}
+                          <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                        {% endif %}
                         <strong>{{ person.name }}</strong>
                         <span>{{ person.affiliation }}</span>
                       </div>

@@ -58,6 +58,7 @@ body {
   font-size: 15px;
   line-height: 1.58;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 a {
@@ -508,29 +509,29 @@ h4 {
 
 .organizer-sections {
   display: grid;
-  gap: 34px;
+  gap: 16px;
 }
 
 .organizer-section-title {
-  margin: 0 0 18px;
+  margin: 0 0 8px;
 }
 
 .leadership-block {
   display: grid;
-  gap: 22px;
+  gap: 6px;
 }
 
 .featured-role-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(220px, 280px));
-  gap: 20px;
+  gap: 10px;
   align-items: stretch;
   justify-content: center;
 }
 
 .leadership-group {
   display: grid;
-  gap: 14px;
+  gap: 4px;
 }
 
 .leadership-group--single {
@@ -553,7 +554,15 @@ h4 {
 .leadership-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 8px;
+}
+
+.leadership-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.leadership-grid--five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .leadership-grid--single {
@@ -566,10 +575,10 @@ h4 {
   grid-template-rows: auto auto 1fr;
   justify-items: center;
   align-content: start;
-  gap: 10px;
+  gap: 2px;
   height: 100%;
   width: min(100%, 260px);
-  padding: 18px;
+  padding: 8px 10px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: linear-gradient(180deg, var(--soft), var(--paper));
@@ -585,18 +594,30 @@ h4 {
 }
 
 .leadership-card img {
-  width: 116px;
-  height: 116px;
+  width: 104px;
+  height: 104px;
   border-radius: 999px;
   object-fit: cover;
   object-position: center top;
+}
+
+.leadership-card__placeholder {
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--soft), var(--banner-bg));
+  color: var(--ink);
+  font-size: 1.8rem;
+  font-weight: 650;
 }
 
 .leadership-card strong {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  min-height: 2.5em;
+  min-height: 1.65em;
   font-size: 1rem;
   font-weight: 650;
   line-height: 1.25;
@@ -606,10 +627,10 @@ h4 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  min-height: 2.9em;
+  min-height: 1.55em;
   color: var(--muted);
   font-size: 0.9rem;
-  line-height: 1.45;
+  line-height: 1.3;
 }
 
 .speaker-grid {
@@ -669,7 +690,7 @@ h4 {
 
 .organizer-groups {
   display: grid;
-  gap: 22px;
+  gap: 10px;
 }
 
 .organizer-group h3 {
@@ -677,7 +698,7 @@ h4 {
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 0;
+  margin: 0 0 6px;
 }
 
 .organizer-status {
@@ -736,6 +757,11 @@ h4 {
     padding: 16px 22px;
   }
 
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
   .nav {
     grid-column: 1 / -1;
     justify-content: flex-start;
@@ -756,6 +782,14 @@ h4 {
     padding-bottom: 30px;
   }
 
+  .title-banner__text {
+    font-size: clamp(1.3rem, 4.8vw, 1.9rem);
+  }
+
+  .title-banner__colocation {
+    font-size: 0.95rem;
+  }
+
   .section {
     padding: 40px 0;
   }
@@ -770,14 +804,92 @@ h4 {
   }
 
   .leadership-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .featured-role-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .leadership-card {
+    width: 100%;
+    padding: 10px 8px;
+    border-radius: 16px;
+  }
+
+  .leadership-card img,
+  .leadership-card__placeholder {
+    width: 84px;
+    height: 84px;
+  }
+
+  .leadership-card strong {
+    min-height: auto;
+    font-size: 0.94rem;
+  }
+
+  .leadership-card span {
+    min-height: auto;
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .people-list--dense {
+    gap: 6px;
+  }
+
+  .person {
+    gap: 1px;
+  }
+
+  .person strong {
+    font-size: 0.95rem;
+  }
+
+  .person span,
+  .person em {
+    font-size: 0.84rem;
+    line-height: 1.35;
   }
 
   .footer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .featured-role-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .featured-role-grid .leadership-group {
+    width: 100%;
+  }
+
+  .featured-role-grid .leadership-card {
+    max-width: 240px;
+  }
+
+  .title-banner {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+
+  .title-banner__text {
+    font-size: clamp(1.2rem, 5vw, 1.65rem);
+  }
+
+  .title-banner__colocation {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    text-align: center;
   }
 }

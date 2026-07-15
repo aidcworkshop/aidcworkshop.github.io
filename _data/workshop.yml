@@ -109,6 +109,7 @@ cfp:
     system_text: "AIDC uses the official ACSAC HotCRP submission system."
     label: "Submission Portal"
     url: "https://aidc.submit.acsac.org/"
+  ieee_templates_url: "https://www.ieee.org/conferences/publishing/templates.html"
   guidelines:
     - "All submitted papers must be prepared in US Letter size, not A4, using the double-column IEEE conference format. This requirement will be strictly enforced. IEEE format templates are available at IEEE Conference Templates."
     - 'LaTeX submissions must use the IEEEtran.cls version 1.8b template with the \documentclass[conference,compsoc]{IEEEtran} document class option.'
@@ -168,6 +169,7 @@ organizers:
   groups:
     - role: "Steering Committee"
       featured: true
+      featured_columns: 5
       status: "In Progress"
       compact: true
       people:
@@ -175,12 +177,20 @@ organizers:
           affiliation: "Horizon3"
           image: "/assets/img/organizers/snehal-antani.jpg"
           url: "https://linkedin.com/in/snehalantani"
+        - name: "Baris Coskun"
+          affiliation: "AWS"
+          image: "/assets/img/organizers/baris-coskun.jpeg"
+          url: "https://www.acetandcoskun.com/baris/"
+        - name: "Christopher Kruegel"
+          affiliation: "UCSB and Cisco"
+          image: "/assets/img/organizers/christopher-kruegel.jpg"
+          url: "https://sites.cs.ucsb.edu/~chris/"
         - name: "Wenke Lee"
           affiliation: "Georgia Tech"
           image: "/assets/img/organizers/wenke-lee.jpg"
           url: "https://wenke.gtisc.gatech.edu/"
         - name: "Giovanni Vigna"
-          affiliation: "UC Santa Barbara"
+          affiliation: "UCSB"
           image: "/assets/img/organizers/giovanni-vigna.jpg"
           url: "https://sites.cs.ucsb.edu/~vigna/"
     - role: "Program Co-Chairs"
@@ -218,6 +228,8 @@ organizers:
       people:
         - name: "Antonio Bianchi"
           affiliation: "Purdue University"
+        - name: "Wajih Ul Hassan"
+          affiliation: "University of Virginia"
         - name: "Mario Kahlhofer"
           affiliation: "Dynatrace"
         - name: "Jordan Kein"
