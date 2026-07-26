@@ -242,6 +242,8 @@ organizers:
           affiliation: "AWS"
         - name: "Raymond Muller"
           affiliation: "Lawrence Livermore National Laboratory"
+        - name: "Kaan Onarlioglu"
+          affiliation: "Akamai Technologies"
         - name: "Mathias Payer"
           affiliation: "EPFL"
         - name: "Tim Pappa"
