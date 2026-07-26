@@ -240,6 +240,8 @@ organizers:
           affiliation: "UC Irvine"
         - name: "Mikhail Kuznetsov"
           affiliation: "AWS"
+        - name: "Raymond Muller"
+          affiliation: "Lawrence Livermore National Laboratory"
         - name: "Mathias Payer"
           affiliation: "EPFL"
         - name: "Tim Pappa"
