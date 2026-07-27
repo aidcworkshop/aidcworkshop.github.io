@@ -169,7 +169,7 @@ organizers:
   groups:
     - role: "Steering Committee"
       featured: true
-      featured_columns: 5
+      featured_columns: 3
       status: "In Progress"
       compact: true
       people:
@@ -181,6 +181,10 @@ organizers:
           affiliation: "AWS"
           image: "/assets/img/organizers/baris-coskun.jpeg"
           url: "https://www.acetandcoskun.com/baris/"
+        - name: "Engin Kirda"
+          affiliation: "Northeastern University"
+          image: "/assets/img/organizers/engin-kirda.png"
+          url: "https://www.ccs.neu.edu/home/ek/"
         - name: "Christopher Kruegel"
           affiliation: "UCSB and Cisco"
           image: "/assets/img/organizers/christopher-kruegel.jpg"
