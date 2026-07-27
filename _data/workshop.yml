@@ -169,7 +169,7 @@ organizers:
   groups:
     - role: "Steering Committee"
       featured: true
-      featured_columns: 3
+      featured_columns: 4
       status: "In Progress"
       compact: true
       people:
@@ -193,6 +193,10 @@ organizers:
           affiliation: "Georgia Tech"
           image: "/assets/img/organizers/wenke-lee.jpg"
           url: "https://wenke.gtisc.gatech.edu/"
+        - name: "Radha Poovendran"
+          affiliation: "University of Washington"
+          image: "/assets/img/organizers/radha-poovendran.jpg"
+          url: "https://people.ece.uw.edu/radha/index.html"
         - name: "Giovanni Vigna"
           affiliation: "UCSB"
           image: "/assets/img/organizers/giovanni-vigna.jpg"

@@ -202,31 +202,86 @@ layout: default
                   <span class="organizer-status">{{ group.status }}</span>
                 {% endif %}
               </h4>
-              <div class="leadership-grid{% if group.featured_columns == 4 %} leadership-grid--four{% endif %}{% if group.featured_columns == 5 %} leadership-grid--five{% endif %}">
-                {% for person in group.people %}
-                  {% if person.url %}
-                    <a class="leadership-card" href="{{ person.url }}">
-                      {% if person.image %}
-                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+              {% if group.role == 'Steering Committee' and group.featured_columns == 4 and group.people.size == 7 %}
+                <div class="leadership-grid leadership-grid--stacked">
+                  <div class="leadership-row leadership-row--four">
+                    {% for person in group.people limit:4 %}
+                      {% if person.url %}
+                        <a class="leadership-card" href="{{ person.url }}">
+                          {% if person.image %}
+                            <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                          {% else %}
+                            <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                          {% endif %}
+                          <strong>{{ person.name }}</strong>
+                          <span>{{ person.affiliation }}</span>
+                        </a>
                       {% else %}
-                        <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                        <div class="leadership-card leadership-card--static">
+                          {% if person.image %}
+                            <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                          {% else %}
+                            <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                          {% endif %}
+                          <strong>{{ person.name }}</strong>
+                          <span>{{ person.affiliation }}</span>
+                        </div>
                       {% endif %}
-                      <strong>{{ person.name }}</strong>
-                      <span>{{ person.affiliation }}</span>
-                    </a>
-                  {% else %}
-                    <div class="leadership-card leadership-card--static">
-                      {% if person.image %}
-                        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                    {% endfor %}
+                  </div>
+                  <div class="leadership-row leadership-row--three">
+                    {% for person in group.people offset:4 %}
+                      {% if person.url %}
+                        <a class="leadership-card" href="{{ person.url }}">
+                          {% if person.image %}
+                            <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                          {% else %}
+                            <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                          {% endif %}
+                          <strong>{{ person.name }}</strong>
+                          <span>{{ person.affiliation }}</span>
+                        </a>
                       {% else %}
-                        <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                        <div class="leadership-card leadership-card--static">
+                          {% if person.image %}
+                            <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                          {% else %}
+                            <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                          {% endif %}
+                          <strong>{{ person.name }}</strong>
+                          <span>{{ person.affiliation }}</span>
+                        </div>
                       {% endif %}
-                      <strong>{{ person.name }}</strong>
-                      <span>{{ person.affiliation }}</span>
-                    </div>
-                  {% endif %}
-                {% endfor %}
-              </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% else %}
+                <div class="leadership-grid{% if group.featured_columns == 4 %} leadership-grid--four{% endif %}{% if group.featured_columns == 5 %} leadership-grid--five{% endif %}">
+                  {% for person in group.people %}
+                    {% if person.url %}
+                      <a class="leadership-card" href="{{ person.url }}">
+                        {% if person.image %}
+                          <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        {% else %}
+                          <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                        {% endif %}
+                        <strong>{{ person.name }}</strong>
+                        <span>{{ person.affiliation }}</span>
+                      </a>
+                    {% else %}
+                      <div class="leadership-card leadership-card--static">
+                        {% if person.image %}
+                          <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+                        {% else %}
+                          <div class="leadership-card__placeholder" aria-hidden="true">{{ person.name | slice: 0 }}</div>
+                        {% endif %}
+                        <strong>{{ person.name }}</strong>
+                        <span>{{ person.affiliation }}</span>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
           {% endif %}
         {% endfor %}

@@ -561,6 +561,33 @@ h4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.leadership-grid--stacked {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.leadership-row {
+  display: flex;
+  gap: 8px;
+}
+
+.leadership-row--four {
+  justify-content: space-between;
+}
+
+.leadership-row--four > .leadership-card,
+.leadership-row--four > .leadership-card--static,
+.leadership-row--three > .leadership-card,
+.leadership-row--three > .leadership-card--static {
+  flex: 0 1 calc((100% - 24px) / 4);
+  max-width: calc((100% - 24px) / 4);
+}
+
+.leadership-row--three {
+  justify-content: center;
+}
+
 .leadership-grid--five {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -808,6 +835,24 @@ h4 {
     gap: 8px;
   }
 
+  .leadership-grid--stacked {
+    gap: 8px;
+  }
+
+  .leadership-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .leadership-row--four > .leadership-card,
+  .leadership-row--four > .leadership-card--static,
+  .leadership-row--three > .leadership-card,
+  .leadership-row--three > .leadership-card--static {
+    flex-basis: auto;
+    max-width: none;
+  }
+
   .featured-role-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
@@ -876,6 +921,10 @@ h4 {
 
   .featured-role-grid .leadership-card {
     max-width: 240px;
+  }
+
+  .leadership-row {
+    grid-template-columns: 1fr;
   }
 
   .title-banner {
