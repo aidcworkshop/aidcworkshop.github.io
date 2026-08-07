@@ -170,7 +170,6 @@ organizers:
     - role: "Steering Committee"
       featured: true
       featured_columns: 4
-      status: "In Progress"
       compact: true
       people:
         - name: "Snehal Antani"
