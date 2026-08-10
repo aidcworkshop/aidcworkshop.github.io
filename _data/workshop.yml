@@ -233,6 +233,8 @@ organizers:
       status: "In Progress"
       compact: true
       people:
+        - name: "Aravind Machiry"
+          affiliation: "Purdue University"
         - name: "Antonio Bianchi"
           affiliation: "Purdue University"
         - name: "Jesse Cooper"
