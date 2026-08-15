@@ -715,6 +715,11 @@ h4 {
   gap: 8px;
 }
 
+.organizer-groups .people-list--dense {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+}
+
 .organizer-groups {
   display: grid;
   gap: 10px;
@@ -883,6 +888,10 @@ h4 {
 
   .people-list--dense {
     gap: 6px;
+  }
+
+  .organizer-groups .people-list--dense {
+    grid-template-columns: 1fr;
   }
 
   .person {
