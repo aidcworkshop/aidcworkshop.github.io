@@ -167,9 +167,11 @@ layout: default
       <h2>{{ workshop.speakers.heading }}</h2>
     </div>
     <div class="section__body speaker-section">
-      {% for paragraph in workshop.speakers.body %}
-        <p>{{ paragraph }}</p>
-      {% endfor %}
+      {% if workshop.speakers.body %}
+        {% for paragraph in workshop.speakers.body %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      {% endif %}
       {% if workshop.speakers.keynotes %}
         <div class="keynote-list">
           {% for speaker in workshop.speakers.keynotes %}

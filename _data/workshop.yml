@@ -25,8 +25,6 @@ overview:
 
 speakers:
   heading: "Keynote Speakers"
-  body:
-    - "AIDC 2026 will feature two keynote speakers."
   keynotes:
     - label: "Keynote 1"
       name: "Yan Shoshitaishvili"
