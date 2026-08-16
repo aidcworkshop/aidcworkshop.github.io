@@ -24,9 +24,21 @@ overview:
     - "The Workshop on Agentic AI in Offensive and Defensive Cyber Operations (AIDC) provides a specialized forum to address these emergent challenges. The goal of AIDC is to bring together researchers, practitioners, and policymakers from academia, industry, and government to advance the theory, methodology, and practice of agentic security. By establishing a shared space for adversarial AI specialists and cybersecurity operational experts, the workshop intends to transition the community from isolated model evaluations toward holistic, dynamic, and resilient systems design."
 
 speakers:
-  heading: "Invited Speakers"
+  heading: "Keynote Speakers"
   body:
-    - "Invited speakers will be announced closer to the workshop date."
+    - "AIDC 2026 will feature two keynote speakers."
+  keynotes:
+    - label: "Keynote 1"
+      name: "Yan Shoshitaishvili"
+      affiliation: "Associate Professor at Arizona State University"
+      image: "/assets/img/speakers/yan-shoshitaishvili.jpg"
+      title: "From A Decade of Binary Analysis to A Year of Agentic Slop!"
+      bio:
+        - "Yan Shoshitaishvili is an Associate Professor at Arizona State University, where he pursues parallel passions of cybersecurity research, real-world impact, and education. His research focuses on automated program analysis and vulnerability detection techniques. Aside from publishing dozens of research papers in top academic venues, Yan led Shellphish's participation in the DARPA Cyber Grand Challenge, achieving the creation of a fully autonomous hacking system that won third place in the competition, and helps guide Shellphish toward the final event of the successor competition, the AI Cyber Challenge."
+        - "Underpinning much of his research is angr, the open-source program analysis framework created by Yan and his collaborators. This framework has powered hundreds of research papers, helped find thousands of security bugs, and continues to be used in research labs and companies around the world."
+        - "When he is not doing research, Yan participates in the enthusiast, educational, and policy cybersecurity communities. He is a Captain Emeritus of Shellphish, one of the oldest ethical hacking groups in the world, and a founder of the Order of the Overflow, with whom he ran DEF CON CTF, the \"world championship\" of cybersecurity competitions, from 2018 through 2021. In order to inspire students to pursue cybersecurity (and, ultimately, compete at DEF CON!), Yan created pwn.college, an open practice-makes-perfect learning platform that is revolutionizing cybersecurity education for aspiring hackers around the world. He continues to develop novel approaches to cybersecurity workforce development in his role as Director of the American Cybersecurity Education Institute and has helped advise government policy through CISA's Technical Advisory Council."
+    - label: "Keynote 2"
+      status: "To Be Announced"
 
 agenda:
   heading: "Tentative Agenda"

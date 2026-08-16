@@ -707,6 +707,116 @@ h4 {
   line-height: 1.5;
 }
 
+.speaker-section {
+  display: grid;
+  gap: 18px;
+}
+
+.speaker-section > p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.keynote-list {
+  display: grid;
+  gap: 14px;
+}
+
+.keynote-card {
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.keynote-card--placeholder {
+  grid-template-columns: 1fr;
+  min-height: 120px;
+  align-items: center;
+}
+
+.keynote-card img {
+  width: 176px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.keynote-card__body {
+  display: grid;
+  gap: 7px;
+}
+
+.keynote-card__label,
+.keynote-card__status {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.keynote-card h3 {
+  margin: 0;
+}
+
+.keynote-card__affiliation,
+.keynote-card__title,
+.keynote-card__details-content p {
+  margin: 0;
+}
+
+.keynote-card__affiliation {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.keynote-card__title {
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.keynote-card__details {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.keynote-card__details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.keynote-card__details summary::after {
+  content: "+";
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.keynote-card__details[open] summary::after {
+  content: "-";
+}
+
+.keynote-card__details-content {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 4px;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 .people-list--compact {
   gap: 14px;
 }
@@ -833,6 +943,15 @@ h4 {
 
   .speaker-grid {
     grid-template-columns: 1fr;
+  }
+
+  .keynote-card {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .keynote-card img {
+    width: 128px;
   }
 
   .leadership-grid {

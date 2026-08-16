@@ -166,10 +166,58 @@ layout: default
     <div class="section__heading">
       <h2>{{ workshop.speakers.heading }}</h2>
     </div>
-    <div class="section__body prose">
+    <div class="section__body speaker-section">
       {% for paragraph in workshop.speakers.body %}
         <p>{{ paragraph }}</p>
       {% endfor %}
+      {% if workshop.speakers.keynotes %}
+        <div class="keynote-list">
+          {% for speaker in workshop.speakers.keynotes %}
+            <article class="keynote-card{% unless speaker.name %} keynote-card--placeholder{% endunless %}">
+              {% if speaker.image %}
+                <img src="{{ speaker.image | relative_url }}" alt="{{ speaker.name }}">
+              {% endif %}
+              <div class="keynote-card__body">
+                {% if speaker.label %}
+                  <span class="keynote-card__label">{{ speaker.label }}</span>
+                {% endif %}
+                {% if speaker.name %}
+                  <h3>{{ speaker.name }}</h3>
+                {% endif %}
+                {% if speaker.affiliation %}
+                  <p class="keynote-card__affiliation">{{ speaker.affiliation }}</p>
+                {% endif %}
+                {% if speaker.title %}
+                  <p class="keynote-card__title">{{ speaker.title }}</p>
+                {% endif %}
+                {% if speaker.status %}
+                  <p class="keynote-card__status">{{ speaker.status }}</p>
+                {% endif %}
+                {% if speaker.abstract %}
+                  <details class="keynote-card__details">
+                    <summary>Abstract</summary>
+                    <div class="keynote-card__details-content">
+                      {% for paragraph in speaker.abstract %}
+                        <p>{{ paragraph }}</p>
+                      {% endfor %}
+                    </div>
+                  </details>
+                {% endif %}
+                {% if speaker.bio %}
+                  <details class="keynote-card__details">
+                    <summary>Bio</summary>
+                    <div class="keynote-card__details-content">
+                      {% for paragraph in speaker.bio %}
+                        <p>{{ paragraph }}</p>
+                      {% endfor %}
+                    </div>
+                  </details>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </section>
 
