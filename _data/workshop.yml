@@ -7,6 +7,8 @@ location: "Los Angeles, California, USA"
 nav:
   - label: "Overview"
     url: "#overview"
+  - label: "News"
+    url: "#news"
   - label: "CFP"
     url: "#cfp"
   - label: "Speakers"
@@ -22,6 +24,14 @@ overview:
     - "Modern cyber operations undergo rapid changes due to the integration of autonomous, language-model-driven agents. In offensive operations, agentic systems automate penetration testing, red-team activities, and end-to-end network intrusion campaigns. Frontier models demonstrate high performance on public benchmarks. Conversely, cyber defense increasingly relies on autonomous agents for real-time threat detection, automated mitigation, and active countermeasure deployment. This co-evolution creates a complex adversarial environment where autonomous offensive models directly interact with adaptive defensive systems."
     - "Despite these rapid capabilities, agentic architectures exhibit critical operational vulnerabilities. Offensive models are frequently trained on narrow, repetitive public corpora, which induce predictable statistical behaviors. Consequently, these agents remain vulnerable to targeted defensive deceptions, prompt exfiltration, and operational security failures. Similarly, automated defensive systems face challenges regarding evasion, input manipulation, and model poisoning. Traditional static evaluation environments fail to replicate these dynamic, model-on-model interactions. Therefore, a systematic analysis of both offensive limitations and defensive capabilities is essential to ensure the robustness of cyber operations."
     - "The Workshop on Agentic AI in Offensive and Defensive Cyber Operations (AIDC) provides a specialized forum to address these emergent challenges. The goal of AIDC is to bring together researchers, practitioners, and policymakers from academia, industry, and government to advance the theory, methodology, and practice of agentic security. By establishing a shared space for adversarial AI specialists and cybersecurity operational experts, the workshop intends to transition the community from isolated model evaluations toward holistic, dynamic, and resilient systems design."
+
+news:
+  heading: "News"
+  items:
+    - date: "August 2026"
+      icon: "microphone"
+      title: "Yan Shoshitaishvili announced as keynote speaker"
+      body: "Yan Shoshitaishvili, Associate Professor at Arizona State University, will give the keynote talk \"From A Decade of Binary Analysis to A Year of Agentic Slop!\""
 
 speakers:
   heading: "Keynote Speakers"

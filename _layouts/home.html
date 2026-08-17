@@ -50,6 +50,42 @@ layout: default
     </div>
   </section>
 
+  {% if workshop.news.items %}
+    <section class="section" id="news">
+      <div class="section__heading">
+        <h2>{{ workshop.news.heading }}</h2>
+      </div>
+      <div class="section__body news-list">
+        {% for item in workshop.news.items %}
+          <article class="news-item">
+            <time>{{ item.date }}</time>
+            <span class="news-item__icon" aria-hidden="true">
+              {% if item.icon == 'microphone' %}
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z" />
+                  <path d="M5 10v1a7 7 0 0 0 14 0v-1" />
+                  <path d="M12 18v3" />
+                  <path d="M8 21h8" />
+                </svg>
+              {% else %}
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16v14H4Z" />
+                  <path d="M8 9h8M8 13h5" />
+                </svg>
+              {% endif %}
+            </span>
+            <div class="news-item__body">
+              <h3>{{ item.title }}</h3>
+              {% if item.body %}
+                <p>{{ item.body }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
   <section class="section" id="cfp">
     <div class="section__heading">
       <h2>{{ workshop.cfp.heading }}</h2>
