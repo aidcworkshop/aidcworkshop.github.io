@@ -185,7 +185,7 @@ cfp:
     url: "https://www.acsac.org/2026/submissions/ai/"
 
 organizers:
-  heading: "Symposium Organizers"
+  heading: "Workshop Organizers"
   groups:
     - role: "Steering Committee"
       featured: true
