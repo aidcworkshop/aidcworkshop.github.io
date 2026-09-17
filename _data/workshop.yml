@@ -223,10 +223,10 @@ organizers:
     - role: "Program Co-Chairs"
       featured: true
       people:
-        - name: "Kerri Prinos"
-          affiliation: "Horizon3"
-          image: "/assets/img/organizers/kerri-prinos.jpeg"
-          url: "https://www.linkedin.com/in/kerri-prinos"
+        - name: "Joshua Knox"
+          affiliation: "Horizon3.ai"
+          image: "/assets/img/organizers/joshua-knox.jpeg"
+          url: "https://www.linkedin.com/in/joshua-knox-b392549b"
         - name: "Z. Berkay Celik"
           affiliation: "Purdue University"
           image: "/assets/img/organizers/berkay-celik.jpg"
@@ -279,6 +279,8 @@ organizers:
           affiliation: "EPFL"
         - name: "Tim Pappa"
           affiliation: "Walmart"
+        - name: "Vishnu Vasanth Radja"
+          affiliation: "Palo Alto Networks"
         - name: "Brendan Saltaformaggio"
           affiliation: "Georgia Tech"
         - name: "Moritz Schloegel"
