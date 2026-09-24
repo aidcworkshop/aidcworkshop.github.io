@@ -414,6 +414,11 @@ h4 {
   color: var(--ink);
 }
 
+.important-dates__old-date {
+  color: var(--muted);
+  margin-right: 6px;
+}
+
 .topic-groups {
   display: grid;
   gap: 14px;

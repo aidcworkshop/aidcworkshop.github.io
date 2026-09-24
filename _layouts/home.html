@@ -67,6 +67,12 @@ layout: default
                   <path d="M12 18v3" />
                   <path d="M8 21h8" />
                 </svg>
+              {% elsif item.icon == 'calendar' %}
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 2v4M16 2v4M3 10h18" />
+                  <path d="M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
+                  <path d="M8 14h5M8 18h8" />
+                </svg>
               {% else %}
                 <svg viewBox="0 0 24 24">
                   <path d="M4 5h16v14H4Z" />
@@ -121,7 +127,13 @@ layout: default
                   <svg class="important-dates__item-icon" aria-hidden="true" viewBox="0 0 24 24">
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
-                  <span><strong>{{ item.label }}:</strong> {{ item.date }}</span>
+                  <span>
+                    <strong>{{ item.label }}:</strong>
+                    {% if item.old_date %}
+                      <s class="important-dates__old-date">{{ item.old_date }}</s>
+                    {% endif %}
+                    {{ item.date }}
+                  </span>
                 </li>
           {% endfor %}
             </ul>
