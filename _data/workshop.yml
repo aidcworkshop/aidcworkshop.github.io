@@ -31,7 +31,7 @@ news:
     - date: "September 2026"
       icon: "calendar"
       title: "Paper submission deadline extended"
-      body: "The paper submission deadline has been extended to October 2, 2026 (Anywhere-on-Earth, AoE)."
+      body: "The paper submission deadline has been extended to October 2, 2026 (Anywhere-on-Earth, AoE), equivalent to Saturday Oct 3, 2026, 11:59:59 UTC."
     - date: "August 2026"
       icon: "microphone"
       title: "Yan Shoshitaishvili announced as keynote speaker"
@@ -117,7 +117,7 @@ cfp:
       items:
         - label: "Paper submission due"
           old_date: "September 25, 2026 (Anywhere-on-Earth, AoE)"
-          date: "October 2, 2026 (Anywhere-on-Earth, AoE)"
+          date: "October 2, 2026 (Anywhere-on-Earth, AoE; equivalent to Saturday Oct 3, 2026, 11:59:59 UTC)"
         - label: "Notification of paper acceptance"
           date: "October 16, 2026"
         - label: "Final paper due"
