@@ -842,6 +842,14 @@ h4 {
   font-size: 0.95rem;
 }
 
+.keynote-card__affiliation a {
+  color: inherit;
+}
+
+.keynote-card__affiliation a:hover {
+  color: var(--link);
+}
+
 .keynote-card__title {
   color: var(--ink);
   font-size: 1.02rem;

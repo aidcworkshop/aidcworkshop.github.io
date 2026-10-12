@@ -47,6 +47,7 @@ speakers:
     - label: "Keynote 1"
       name: "Yan Shoshitaishvili"
       affiliation: "Associate Professor at Arizona State University"
+      affiliation_url: "https://yancomm.net/"
       image: "/assets/img/speakers/yan-shoshitaishvili.jpg"
       title: "From A Decade of Binary Analysis to A Year of Agentic Slop!"
       bio:
@@ -56,6 +57,7 @@ speakers:
     - label: "Keynote 2"
       name: "Naveen Sunkavally"
       affiliation: "Distinguished Engineer at Horizon3"
+      affiliation_url: "https://www.linkedin.com/in/naveensunkavally/"
       image: "/assets/img/speakers/naveen-sunkavally.jpg"
       title: "From VR to Production: How to Let Autonomous Agents Attack Enterprise Networks Without Breaking Them"
       bio:
@@ -238,7 +240,7 @@ organizers:
       featured: true
       people:
         - name: "Joshua Knox"
-          affiliation: "Horizon3.ai"
+          affiliation: "Horizon3"
           image: "/assets/img/organizers/joshua-knox.jpeg"
           url: "https://www.linkedin.com/in/joshua-knox-b392549b"
         - name: "Z. Berkay Celik"

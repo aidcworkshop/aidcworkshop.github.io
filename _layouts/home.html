@@ -235,7 +235,13 @@ layout: default
                   <h3>{{ speaker.name }}</h3>
                 {% endif %}
                 {% if speaker.affiliation %}
-                  <p class="keynote-card__affiliation">{{ speaker.affiliation }}</p>
+                  <p class="keynote-card__affiliation">
+                    {% if speaker.affiliation_url %}
+                      <a href="{{ speaker.affiliation_url }}">{{ speaker.affiliation }}</a>
+                    {% else %}
+                      {{ speaker.affiliation }}
+                    {% endif %}
+                  </p>
                 {% endif %}
                 {% if speaker.title %}
                   <p class="keynote-card__title">{{ speaker.title }}</p>
