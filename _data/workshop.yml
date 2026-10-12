@@ -28,6 +28,10 @@ overview:
 news:
   heading: "News"
   items:
+    - date: "October 2026"
+      icon: "microphone"
+      title: "Naveen Sunkavally announced as keynote speaker"
+      body: "Naveen Sunkavally, Distinguished Engineer at Horizon3, will give the keynote talk \"From VR to Production: How to Let Autonomous Agents Attack Enterprise Networks Without Breaking Them\""
     - date: "September 2026"
       icon: "calendar"
       title: "Paper submission deadline extended"
@@ -50,7 +54,12 @@ speakers:
         - "Underpinning much of his research is angr, the open-source program analysis framework created by Yan and his collaborators. This framework has powered hundreds of research papers, helped find thousands of security bugs, and continues to be used in research labs and companies around the world."
         - "When he is not doing research, Yan participates in the enthusiast, educational, and policy cybersecurity communities. He is a Captain Emeritus of Shellphish, one of the oldest ethical hacking groups in the world, and a founder of the Order of the Overflow, with whom he ran DEF CON CTF, the \"world championship\" of cybersecurity competitions, from 2018 through 2021. In order to inspire students to pursue cybersecurity (and, ultimately, compete at DEF CON!), Yan created pwn.college, an open practice-makes-perfect learning platform that is revolutionizing cybersecurity education for aspiring hackers around the world. He continues to develop novel approaches to cybersecurity workforce development in his role as Director of the American Cybersecurity Education Institute and has helped advise government policy through CISA's Technical Advisory Council."
     - label: "Keynote 2"
-      status: "To Be Announced"
+      name: "Naveen Sunkavally"
+      affiliation: "Distinguished Engineer at Horizon3"
+      image: "/assets/img/speakers/naveen-sunkavally.jpg"
+      title: "From VR to Production: How to Let Autonomous Agents Attack Enterprise Networks Without Breaking Them"
+      bio:
+        - "Naveen Sunkavally is a Distinguished Engineer and founding engineer at Horizon3, where he architected the autonomous pentesting platform NodeZero. His work fuses AI-driven vulnerability research with offensive operations to uncover real-world attack paths and deliver machine-speed, scalable security validation to enterprise networks. With 25 years of industry experience, he has built cyber products spanning data security, identity, network monitoring, and endpoint defense, and he holds dozens of cybersecurity patents."
 
 agenda:
   heading: "Tentative Agenda"
@@ -119,7 +128,7 @@ cfp:
           old_date: "September 25, 2026 (Anywhere-on-Earth, AoE)"
           date: "October 2, 2026 (Anywhere-on-Earth, AoE; equivalent to Saturday Oct 3, 2026, 11:59:59 UTC)"
         - label: "Notification of paper acceptance"
-          date: "October 16, 2026"
+          date: "October 23, 2026"
         - label: "Final paper due"
           date: "October 30, 2026"
     - heading: "Lightning Talk/Tutorial"
