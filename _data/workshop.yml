@@ -138,9 +138,9 @@ cfp:
         - label: "Lightning Talk/Tutorial submission due"
           date: "October 8, 2026 (Anywhere-on-Earth, AoE)"
         - label: "Notification of Lightning Talk/Tutorial acceptance"
-          date: "October 16, 2026"
+          date: "October 25, 2026"
         - label: "Final Lightning Talk/Tutorial Abstract due"
-          date: "October 30, 2026"
+          date: "November 2, 2026"
   submission:
     system_text: "AIDC uses the official ACSAC HotCRP submission system."
     label: "Submission Portal"
