@@ -132,7 +132,7 @@ cfp:
         - label: "Notification of paper acceptance"
           date: "October 23, 2026"
         - label: "Final paper due"
-          date: "October 30, 2026"
+          date: "November 8, 2026, 11:59:59 UTC (equivalent to November 7, 2026, 11:59:59 Anywhere-on-Earth, AoE)"
     - heading: "Lightning Talk/Tutorial"
       items:
         - label: "Lightning Talk/Tutorial submission due"
@@ -140,7 +140,7 @@ cfp:
         - label: "Notification of Lightning Talk/Tutorial acceptance"
           date: "October 25, 2026"
         - label: "Final Lightning Talk/Tutorial Abstract due"
-          date: "November 2, 2026"
+          date: "November 8, 2026, 11:59:59 UTC (equivalent to November 7, 2026, 11:59:59 Anywhere-on-Earth, AoE)"
   submission:
     system_text: "AIDC uses the official ACSAC HotCRP submission system."
     label: "Submission Portal"
