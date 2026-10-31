@@ -92,6 +92,138 @@ layout: default
     </section>
   {% endif %}
 
+  <section class="section" id="schedule">
+    <div class="section__heading">
+      <h2>{{ workshop.schedule.heading }}</h2>
+      <p>{{ workshop.schedule.date }} · {{ workshop.schedule.timezone }}</p>
+    </div>
+    {% if workshop.schedule.presentation_timing %}
+      <div class="program-timing">
+        <h3>{{ workshop.schedule.presentation_timing.heading }}</h3>
+        <p>{{ workshop.schedule.presentation_timing.intro }}</p>
+        <ul>
+          {% for timing in workshop.schedule.presentation_timing.items %}
+            <li><strong>{{ timing.category }}:</strong> {{ timing.duration }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    <div class="section__body program-list">
+      {% for item in workshop.schedule.items %}
+        {% if item.presentations %}
+          <article class="program-session">
+            <div class="program-session__header">
+              <time class="program-time">{{ item.time }}</time>
+              <div>
+                <p class="program-item__type">{{ item.type }}</p>
+                <h3>{{ item.title }}</h3>
+                {% if item.chair %}
+                  <p class="program-session__chair"><strong>Session chair:</strong> {{ item.chair }}</p>
+                {% endif %}
+              </div>
+            </div>
+            <div class="program-session__presentations">
+              {% for presentation in item.presentations %}
+                <article class="program-presentation">
+                  <div>
+                    {% if presentation.type %}
+                      <p class="program-presentation__type">{{ presentation.type }}</p>
+                    {% endif %}
+                    <h4>{{ presentation.title }}</h4>
+                    {% if presentation.authors %}
+                      <p class="program-presentation__people"><strong>Authors and affiliations:</strong> {{ presentation.authors }}</p>
+                    {% elsif presentation.speaker %}
+                      <p class="program-presentation__people"><strong>Speaker:</strong> {{ presentation.speaker }}</p>
+                    {% endif %}
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+          </article>
+        {% else %}
+          <article class="program-item">
+            <time class="program-time">{{ item.time }}</time>
+            <div>
+              <p class="program-item__type">{{ item.type }}</p>
+              <h3>{{ item.title }}</h3>
+              {% if item.speaker %}
+                <p class="program-item__people"><strong>Speaker:</strong> {{ item.speaker }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section" id="speakers">
+    <div class="section__heading">
+      <h2>{{ workshop.speakers.heading }}</h2>
+    </div>
+    <div class="section__body speaker-section">
+      {% if workshop.speakers.body %}
+        {% for paragraph in workshop.speakers.body %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      {% endif %}
+      {% if workshop.speakers.keynotes %}
+        {% assign keynotes = workshop.speakers.keynotes | sort: "order" %}
+        <div class="keynote-list">
+          {% for speaker in keynotes %}
+            <article class="keynote-card{% unless speaker.name %} keynote-card--placeholder{% endunless %}">
+              {% if speaker.image %}
+                <img src="{{ speaker.image | relative_url }}" alt="{{ speaker.name }}">
+              {% endif %}
+              <div class="keynote-card__body">
+                {% if speaker.label %}
+                  <span class="keynote-card__label">{{ speaker.label }}</span>
+                {% endif %}
+                {% if speaker.name %}
+                  <h3>{{ speaker.name }}</h3>
+                {% endif %}
+                {% if speaker.affiliation %}
+                  <p class="keynote-card__affiliation">
+                    {% if speaker.affiliation_url %}
+                      <a href="{{ speaker.affiliation_url }}">{{ speaker.affiliation }}</a>
+                    {% else %}
+                      {{ speaker.affiliation }}
+                    {% endif %}
+                  </p>
+                {% endif %}
+                {% if speaker.title %}
+                  <p class="keynote-card__title">{{ speaker.title }}</p>
+                {% endif %}
+                {% if speaker.status %}
+                  <p class="keynote-card__status">{{ speaker.status }}</p>
+                {% endif %}
+                {% if speaker.abstract %}
+                  <details class="keynote-card__details">
+                    <summary>Abstract</summary>
+                    <div class="keynote-card__details-content">
+                      {% for paragraph in speaker.abstract %}
+                        <p>{{ paragraph }}</p>
+                      {% endfor %}
+                    </div>
+                  </details>
+                {% endif %}
+                {% if speaker.bio %}
+                  <details class="keynote-card__details">
+                    <summary>Bio</summary>
+                    <div class="keynote-card__details-content">
+                      {% for paragraph in speaker.bio %}
+                        <p>{{ paragraph }}</p>
+                      {% endfor %}
+                    </div>
+                  </details>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
   <section class="section" id="cfp">
     <div class="section__heading">
       <h2>{{ workshop.cfp.heading }}</h2>
@@ -207,87 +339,6 @@ layout: default
 
       <h3>{{ workshop.cfp.ai_policy.heading }}</h3>
       <p>{{ workshop.cfp.ai_policy.body_prefix }} <a class="text-link" href="{{ workshop.cfp.ai_policy.url }}">{{ workshop.cfp.ai_policy.label }}</a> {{ workshop.cfp.ai_policy.body_suffix }}</p>
-    </div>
-  </section>
-
-  <section class="section" id="speakers">
-    <div class="section__heading">
-      <h2>{{ workshop.speakers.heading }}</h2>
-    </div>
-    <div class="section__body speaker-section">
-      {% if workshop.speakers.body %}
-        {% for paragraph in workshop.speakers.body %}
-          <p>{{ paragraph }}</p>
-        {% endfor %}
-      {% endif %}
-      {% if workshop.speakers.keynotes %}
-        <div class="keynote-list">
-          {% for speaker in workshop.speakers.keynotes %}
-            <article class="keynote-card{% unless speaker.name %} keynote-card--placeholder{% endunless %}">
-              {% if speaker.image %}
-                <img src="{{ speaker.image | relative_url }}" alt="{{ speaker.name }}">
-              {% endif %}
-              <div class="keynote-card__body">
-                {% if speaker.label %}
-                  <span class="keynote-card__label">{{ speaker.label }}</span>
-                {% endif %}
-                {% if speaker.name %}
-                  <h3>{{ speaker.name }}</h3>
-                {% endif %}
-                {% if speaker.affiliation %}
-                  <p class="keynote-card__affiliation">
-                    {% if speaker.affiliation_url %}
-                      <a href="{{ speaker.affiliation_url }}">{{ speaker.affiliation }}</a>
-                    {% else %}
-                      {{ speaker.affiliation }}
-                    {% endif %}
-                  </p>
-                {% endif %}
-                {% if speaker.title %}
-                  <p class="keynote-card__title">{{ speaker.title }}</p>
-                {% endif %}
-                {% if speaker.status %}
-                  <p class="keynote-card__status">{{ speaker.status }}</p>
-                {% endif %}
-                {% if speaker.abstract %}
-                  <details class="keynote-card__details">
-                    <summary>Abstract</summary>
-                    <div class="keynote-card__details-content">
-                      {% for paragraph in speaker.abstract %}
-                        <p>{{ paragraph }}</p>
-                      {% endfor %}
-                    </div>
-                  </details>
-                {% endif %}
-                {% if speaker.bio %}
-                  <details class="keynote-card__details">
-                    <summary>Bio</summary>
-                    <div class="keynote-card__details-content">
-                      {% for paragraph in speaker.bio %}
-                        <p>{{ paragraph }}</p>
-                      {% endfor %}
-                    </div>
-                  </details>
-                {% endif %}
-              </div>
-            </article>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  </section>
-
-  <section class="section" id="agenda">
-    <div class="section__heading">
-      <h2>{{ workshop.agenda.heading }}</h2>
-    </div>
-    <div class="section__body agenda-list">
-      {% for item in workshop.agenda.items %}
-        <div class="agenda-item">
-          <time>{{ item.time }}</time>
-          <span>{{ item.title }}</span>
-        </div>
-      {% endfor %}
     </div>
   </section>
 
