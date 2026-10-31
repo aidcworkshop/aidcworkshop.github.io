@@ -2,6 +2,7 @@
   --ink: #000000;
   --muted: #5f6368;
   --line: #e3e7ee;
+  --program-line: #9aa8ba;
   --link: #0b57d0;
   --paper: #ffffff;
   --soft: #f8fafc;
@@ -24,6 +25,7 @@
   --ink: #f4f7fb;
   --muted: #a8b3c2;
   --line: #293546;
+  --program-line: #5d7189;
   --link: #7fb4ff;
   --paper: #0d1117;
   --soft: #121922;
@@ -318,7 +320,7 @@ h4 {
 .program-timing {
   margin: 0 0 12px;
   padding: 14px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--program-line);
   border-radius: 12px;
   background: linear-gradient(180deg, var(--soft), var(--paper));
 }
@@ -353,7 +355,7 @@ h4 {
 
 .program-item,
 .program-session {
-  border: 1px solid var(--line);
+  border: 1px solid var(--program-line);
   border-radius: 12px;
   background: var(--paper);
 }
@@ -419,7 +421,7 @@ h4 {
 
 .program-session__presentations {
   padding: 0 14px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--program-line);
 }
 
 .program-presentation {
@@ -427,7 +429,7 @@ h4 {
 }
 
 .program-presentation + .program-presentation {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--program-line);
 }
 
 .topic-list {
