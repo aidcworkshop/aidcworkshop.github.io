@@ -178,7 +178,7 @@ schedule:
         - time: "13:57–14:09"
           type: "Regular paper"
           title: "Where Rules End and Judges Begin: Measuring the Judgment Boundary in Multi-Agent Systems Security"
-          authors: "Shaswata Mitra (The University of Alabama); Md Rayhanur Rahman; Raj Patel; Shahram Rahimi; Subash Neupane; Sudip Mittal"
+          authors: "Shaswata Mitra, Md Rayhanur Rahman, Raj Patel, Shahram Rahimi, Subash Neupane, Sudip Mittal (The University of Alabama)"
         - time: "14:09–14:21"
           type: "Regular paper"
           title: "Reviewed but Not Reviewable: Runtime Instruction Relocation in AI Browser Extensions"
