@@ -194,7 +194,7 @@ schedule:
         - time: "14:37–14:44"
           type: "Work-in-progress paper"
           title: "WIP: Generating Multi-Host Provenance Graphs with LLM Agents"
-          authors: "Aniruddha Sawant (Arizona State University); Leo Y. Lin (Purdue University); Mikhail Kuznetsov (Amazon); Muslum Ozgur Ozmen (Arizona State University); Z. Berkay Celik (Purdue University)"
+          authors: "Aniruddha Sawant (Arizona State University); Leo Y. Lin (Purdue University); Mikhail Kuznetsov (Amazon); Z. Berkay Celik (Purdue University); Muslum Ozgur Ozmen (Arizona State University)"
         - time: "14:44–14:51"
           type: "Work-in-progress paper"
           title: "Cheap to Generate, Expensive to Verify: Human–Agent Allocation in Detection Engineering"
